@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
         "module": "CommonJs",
-        "outDir": "./build"
+        "outDir": "./dist"
     }
 }
