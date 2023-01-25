@@ -12,6 +12,9 @@ export class Square{
     l3: Line
     l4: Line
 
+    area: number
+    perimeter: number
+
     constructor(startPoint: Point, sideLength: number){
         this.p1 = startPoint
         this.p2 = new Point(this.p1.x, this.p1.y + sideLength)
@@ -22,10 +25,13 @@ export class Square{
         this.l2 = new Line(this.p2, this.p3)
         this.l3 = new Line(this.p3, this.p4)
         this.l4 = new Line(this.p4, this.p1)
+
+        this.area = sideLength*sideLength
+        this.perimeter = sideLength*4
     }
 
     toString(){
-        return `${this.p1} ${this.p2} ${this.p3} ${this.p4}`
+        return `${this.p1} ${this.p2} ${this.p3} ${this.p4} | Area: ${this.area}, Permimeter: ${this.perimeter}`
     }
 
 }

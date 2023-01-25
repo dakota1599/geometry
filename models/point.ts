@@ -35,15 +35,3 @@ export class Point{
     }
 
 }
-
-// Similar to a Point, the Vector contains additional methods for linear algebra calculations.
-export class Vector extends Point {
-
-    constructor(x: number, y: number){
-        super(x,y)
-    }
-
-    public static dotProduct(x: Vector, y: Vector){
-        return (x.x * y.x) + (x.y * y.y)
-    }
-}
