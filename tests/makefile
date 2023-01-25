@@ -1,8 +1,8 @@
 TSC = tsc
 
-AND = &&
-
 NODE = node ./build/tests/
+
+AND = &&
 
 all: main
 
