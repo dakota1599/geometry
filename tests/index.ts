@@ -1,9 +1,9 @@
-import { pointTest } from './point-test';
-
-export * from './point-test';
+import pointTest from './point-test'
+import lineTest from './line-test'
 
 const results = [
-    pointTest()
+    pointTest(),
+    lineTest()
 ]
 
 console.log(results)
