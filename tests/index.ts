@@ -4,11 +4,16 @@ import SquareTest from './square-test'
 import { Point, Vector } from '../models'
 
 
-var a = new Vector([3, 0, -3])
+var a = new Vector([1, 1, 1])
 var b = new Vector([1, 6, 1])
 var c = new Point(5, 6)
 
-console.log(Vector.dotProduct(a, b))
+var d = Vector.add(a, a)
+
+console.log(d.toString())
+d.add(a)
+console.log(d.toString())
+console.log(d.dotProduct(b))
 
 // console.log(a.toString())
 // console.log(b.toString())
