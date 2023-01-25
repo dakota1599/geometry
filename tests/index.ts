@@ -11,6 +11,7 @@ var c = new Point(5, 6)
 var d = Vector.add(a, a)
 
 console.log(d.toString())
+console.log(d.magnitude())
 d.add(a)
 console.log(d.toString())
 console.log(d.dotProduct(b))

@@ -32,15 +32,17 @@ export class Vector{
     add(v: Vector){
         Vector.validateDimension(this, v)
 
-        for(var i = 0; i < this.vector.length; i++){
-            this.vector[i] += v.vector[i]
-        }
+        this.vector = Vector.add(this, v).vector
 
         return this
     }
 
     dotProduct(v: Vector){
         return Vector.dotProduct(this, v)
+    }
+
+    magnitude(){
+        return Vector.magnitude(this)
     }
 
 
@@ -69,9 +71,19 @@ export class Vector{
         return new Vector(result)
     }
 
+    static magnitude(a: Vector){
+        var total = 0;
+
+        a.vector.forEach((val) => {
+            total += (val*val)
+        })
+
+        return Math.sqrt(total)
+    }
+
     static validateDimension(a: Vector, b: Vector){
         if(a.vector.length != b.vector.length){
-            throw new Error("Vectors must be of same dimension.")
+            throw new Error("Vectors must be of the same dimension.")
         }
     }
 }
