@@ -8,6 +8,6 @@ export class Point{
     }
 
     public toString() {
-        return ""
+        return `(${this.x}, ${this.y})`
     }
 }
