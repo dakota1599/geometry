@@ -1,9 +1,14 @@
 import { Line, Point } from "../models"
+import { Test } from "./test"
 
-const lineText = () => {
-    var a = new Line(new Point(1,2), new Point(3,4))
-
-    return a.toString() == "(y = 1x + 1)"
+class LineTest extends Test{
+    public run() {
+        throw new Error("Method not implemented.")
+    }
+    
+    public static createLine(start: Point, end: Point){
+        return new Line(start, end)
+    }
 }
 
-export default lineText
+export default LineTest
